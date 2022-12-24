@@ -1,10 +1,13 @@
 from functions import *
 
-print("#########################")
+print("#########################\n")
 print("Qual a data de vencimento?")
-print("#########################")
+print("#########################\n")
 
 due_date = input("")
 
-print(verify_due(due_date))
+if len(due_date) == 10:
+    print(verify_due(due_date))
+else:
+    print("Entrada inválida!")
 
