@@ -5,12 +5,15 @@ def today():
     return today
 
 def verify_date(date):
-    date_format = datetime.strptime(date, "%d-%m-%Y")
-    return date_format
+    try:
+        date_format = datetime.strptime(date, "%d-%m-%Y")
+        return date_format
+    except:
+        raise Exception ("Entrada inválida!")
 
 def verify_due(date_ref):
     due_date = verify_date(date=date_ref)
-    if today() > date_ref:
+    if today() > due_date:
         return True
     else:
         return False
