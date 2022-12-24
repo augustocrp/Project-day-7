@@ -14,7 +14,7 @@ def verify_date(date):
 def verify_due(date_ref):
     due_date = verify_date(date=date_ref)
     if today() > due_date:
-        return True
+        return "Expirou"
     else:
-        return False
+        return "Não expirou."
 
